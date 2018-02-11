@@ -172,6 +172,8 @@
 
 			float2 finalUV;
 
+			//float h= getHeight(rayPos.xz);
+
 			for (int i = 0; i < _Steps; i++)
 			{
 				//Get the current height at this uv coordinate
@@ -192,6 +194,8 @@
 				//Move along the ray
 				rayPos += _StepDistance * rayDir;
 			}
+
+			//finalUV=ParallaxOffset(h, _Height, IN.viewDir);
 
 			//Output
 			o.Albedo = finalColor.rgb*_DiffuseCol*_DiffuseAmount*tex2D(_DiffuseAmntMap,finalUV);

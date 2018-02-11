@@ -58,6 +58,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\Texture3DLerp.compute" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\CopyStd.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Bloom.shader" />
+     <None Include="Assets\materials\shaders\burn away.shader" />
      <None Include="Assets\PostProcessing\Shaders\xRLib.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVOUpsample.compute" />
      <None Include="Assets\materials\shaders\paralax.shader" />
