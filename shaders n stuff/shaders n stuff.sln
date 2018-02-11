@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shaders n stuff", "Assembly-CSharp.csproj", "{C1902274-782D-0121-01F0-4F10B664CD3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shaders n stuff", "com.unity.postprocessing.Runtime.csproj", "{4A107134-C0A0-47BA-465A-7B52C2FCA486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "shaders n stuff", "com.unity.postprocessing.Editor.csproj", "{65F062E5-98D4-377C-BDCE-476D3415D33C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{C1902274-782D-0121-01F0-4F10B664CD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1902274-782D-0121-01F0-4F10B664CD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1902274-782D-0121-01F0-4F10B664CD3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A107134-C0A0-47BA-465A-7B52C2FCA486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A107134-C0A0-47BA-465A-7B52C2FCA486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A107134-C0A0-47BA-465A-7B52C2FCA486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A107134-C0A0-47BA-465A-7B52C2FCA486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F062E5-98D4-377C-BDCE-476D3415D33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F062E5-98D4-377C-BDCE-476D3415D33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F062E5-98D4-377C-BDCE-476D3415D33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F062E5-98D4-377C-BDCE-476D3415D33C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
