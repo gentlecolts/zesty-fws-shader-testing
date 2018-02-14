@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Burner.cs" />
      <Compile Include="Assets\orbit.cs" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Waveform.compute" />
@@ -104,6 +105,7 @@
      <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.compute" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
+     <None Include="Assets\materials\shaders\aged.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Copy.shader" />
      <None Include="Assets\materials\shaders\bleb.shader" />
      <None Include="Assets\PostProcessing\Shaders\API\D3D11.hlsl" />
