@@ -16,7 +16,7 @@ public class Burner : MonoBehaviour {
 	void Update () {
 		float x=Mathf.Sin(Time.time);
 		x*=x;
-		r.material.SetFloat("_BurnAmount",x);
+		r.material.SetFloat("_BlendVal",x);
 		//Debug.Log(x);
 	}
 }
