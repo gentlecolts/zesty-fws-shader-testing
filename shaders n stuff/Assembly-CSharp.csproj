@@ -83,6 +83,7 @@
      <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample2.compute" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ScalableAO.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\ACES.hlsl" />
+     <None Include="Assets\materials\shaders\jh.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVODownsample1.compute" />
      <None Include="Assets\PostProcessing\Shaders\StdLib.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\MultiScaleVO.shader" />
@@ -104,6 +105,7 @@
      <None Include="Assets\PostProcessing\Shaders\API\Metal.hlsl" />
      <None Include="Assets\PostProcessing\Shaders\Debug\Vectorscope.compute" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\TemporalAntialiasing.shader" />
+     <None Include="Assets\materials\shaders\grass.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\ScreenSpaceReflections.shader" />
      <None Include="Assets\materials\shaders\aged.shader" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\Copy.shader" />
