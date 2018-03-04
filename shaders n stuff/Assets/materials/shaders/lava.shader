@@ -12,7 +12,6 @@
 		_BlendSoft("Blend Softness",Range(0,1))=.05
 		_BlendEdge("Edge Color",Color)=(0,0,0,0)
 		_BlendBright("Edge Brightness",float)=1
-		_BlendVar("Blend Variance",Range(0,1))=0
 		_BlendTex("Blend Pattern",2D)="white"{}
 
 		_DispMap("Displacement Texture",2D)="white"{}
@@ -24,7 +23,7 @@
 
 		_NoiseTex("Noise Texture",2D)="grey"{}
 		_NoiseOff("Noise Offset (instanced)",Vector)=(0,0,0,0)
-		_NoiseStr("Noise Strength",Range(0,1))=0
+		_NoiseStr("Noise Strength",Float)=0
 	}
 	SubShader {
 		//Tags { "Queue"="Transparent" "RenderType"="Transparent" "IgnoreProjector"="True" }
@@ -95,24 +94,15 @@
 			v.vertex.xyz += offset;
 		}
 
-		#define M_PI 3.1415926535897932384626433832795
-		float3 getRNG(float3 seed,int n){
-			float3 x=seed;
-			for(int i=0;i<n;i++){
-				x=frac(x*M_PI);
-			}
-
-			return 2*x-1;
-		}
-		float3 noisefn(float3 seed,float3 base,float strength){
-			float3 noise=getRNG(seed,5);//generate noise from -1 to 1
-			//noise needs to be actu
-			noise*=strength;
+		float4 noisefn(float2 uv,float4 base){
+			float4 noise=tex2D(_NoiseTex,uv+UNITY_ACCESS_INSTANCED_PROP(Props,_NoiseOff))*2-1;//generate noise from -1 to 1
+			//scale noise by str
+			noise*=_NoiseStr;
 
 			//input values of 0 and 1 should never change, 0.5 should have most variance
-			float3 offset=base*(1-base);
+			float4 offset=base*(1-base);
 
-			//offset by noise
+			//apply noise to our offset
 			offset*=noise;
 
 			return base+offset;
@@ -126,7 +116,7 @@
 			fixed4 diff = tex2D (_MainTex, mainUV)*_Color;
 			fixed4 diff2 = tex2D(_MainTex2,mainUV)*_Color2;
 			float4 val=tex2D(_BlendTex,mainUV);
-			//float val=noisefn(_Time.y+mainUV,tex2D(_BlendTex,mainUV),_BlendVar).r;
+			val=noisefn(mainUV,val);
 
 			val.a=(val.r+val.g+val.b)/3;
 			//val.a=val.r;
