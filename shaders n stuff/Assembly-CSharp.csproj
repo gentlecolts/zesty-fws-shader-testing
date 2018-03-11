@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Burner.cs" />
+     <Compile Include="Assets\BurnInOut.cs" />
      <Compile Include="Assets\LavaNoiseVary.cs" />
      <Compile Include="Assets\orbit.cs" />
      <None Include="Assets\PostProcessing\Shaders\Builtins\FinalPass.shader" />
